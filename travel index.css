@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;  /* smooth means scroll bar ah theriyathu*/
+    
+}
+
+/*--------- Nabar start -------*/
+#navbar{
+    background-color: #f9f9f9;
+    position: sticky;
+    
+}
+/* Ipo na id vachurukan antha navbar brand atha style panna travel
+ngura name ah style aguma */
+#logo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    text-shadow: 0px 1px 2px black;
+    margin-bottom: 5px;
+}
+
+/* Ipo na span kuduthanla athan T uh athuku clr */
+#logo span{
+    color: #ffa500;
+}
+
+/* Ipo na navbar uh clr kuduthurukan */
+.navbar-toggler span{
+    color: #ffa500;
+}
+
+/* Ipo UL uh style apply pandran margin left 20px */
+.navbar-nav{
+    margin-left: 20px;
+}
+
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: .5s ease;
+
+}
+.nav-item .nav-link:hover{
+    background-color: #ffa500;
+    color: white;
+}
+.btn{
+    background-color: #ffa500;
+    border: none;
+}
+
+/*-------------------------- Home page start----------------------------- */
+
+.home{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2)), 
+    url(https://images.pexels.com/photos/3243090/pexels-photo-3243090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home .content{
+    text-align: center;
+    padding-top: 200px;
+}
+.home .content h5{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;   
+}
+.home .content h1{
+    color: #f9f9f9;
+    font-size: 5rem;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+.home .content p{
+    color: #f9f9f9;
+    font-size: 1rem;
+    font-weight: 500;
+    text-shadow: 0px 1px 1px black;
+}
+
+
+/*   Animation potrukan for words moving automatical and athu epdin
+ipo after pesudo class use panni na span use panni select panitu
+content ah blank ah vitranu frst apm color animation name timing apm
+evalo times n epdinu ease in mathiri linear kuduthurukana  */
+
+
+.home .content .changecontent::after{
+    content: "";
+    color: #ffa500;
+    text-shadow:0px 1px 1px black ;
+    animation: changetext 10s infinite linear;
+}
+
+/* And ipo ena pnirukana keyframse ah frst name mention panirukana
+and 0 perventage ah irunthu ena aganum solirukan antha content ah ena varanum 
+kuduthutu menation panirukan */
+
+@keyframes changetext {
+    0%{ content: "India";}
+    10%{ content: "Srilanka";}
+    20%{ content: "Italy";}
+    30%{ content: "France";}
+    40%{ content: "Spain";}
+    50%{ content: "Japan";}
+    60%{ content: "China";}
+    70%{ content: "USA";}
+    80%{ content: "Dubai";}
+    90%{ content: "Mexico";}
+    100%{ content: "Malaysia";}
+    
+}
+
+.home .content a{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 1s;
+}
+.home .content a:hover{
+    background-color: #ffa500;
+    color: #f9f9f9;
+}
+
+/* IPo media quires potrukan athu yethukuna max width 750 ah athavathu 
+screen koraya koraya bg img vanthu 50% aganum so 100% ah irunthu athuve 
+50% aagi img center uh vanthurum content */
+
+/* And main content oda font sizes matum korachurukan  */
+
+@media(max-width:765px){
+    .home{
+        background-position: 50%;
+    }
+    .home .content h5{
+        font-size:2rem ;
+    }
+    .home .content h1{
+        font-size: 3.5rem ;
+    }
+    .home .content p{
+        font-size: 0.8rem ;
+        
+    }
+    
+    .home .content a{
+        letter-spacing: 0;   
+        margin-top: 10px;  
+    }
+}
+/* Home page end */
+
+
+/* Book page starts */
+
+.Book{
+  background-color: white;
+  padding: 50px;
+  
+}
+
+.maintext h1{
+    text-align: center;
+    text-shadow: 0px 1px 3px black;
+    font-weight: 600;
+}
+ .maintext span{
+    color: #ffa500;
+ }
+.Book .card img{
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px black;
+    height: 450px;
+}
+.Book .row{
+    margin-top: 30px;
+}
+.Book form input{
+    padding: 10px;
+    color: black;
+    border: none;
+    box-shadow: 0px 5px 5px -4px black;
+    font-size: .9rem;
+    border-radius: 10px;
+}
+.Book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;  /* resize ah enana athula vara 3 lines in edge*/
+    box-shadow: 0px 5px 5px -4px black;
+    height: 200px;
+}
+.Book .submit{
+    margin-top: 20px;
+    width: 160px;
+    background-color: #ffa500;
+    color: #f9f9f9;
+    font-size: 1rem;
+    font-weight: 550;
+    text-align: center;
+    transition: 0.5s;
+}
+.Book .submit:hover{
+    width: 170px;
+}
+@media(max-width:765px){
+    .Body{
+        padding: 0;
+    }
+    .Body h1{
+        padding: 20px;
+    }
+}
+
+
+
+
+/*-------------------- packages page start -------------------------*/
+
+.packages .row{
+    margin-top: 30px;
+}
+.star .checked{
+    color: #ffa500;
+}
+.card{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -5px black;
+    background-color: #f9f9f9;
+    border: none;
+}
+.card img{
+    border-radius: 10px;
+    height: 350px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.card img:hover{
+    transform: scale(1.1);
+}
+
+.packages h6{
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+.packages a{
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ffa500;
+    color: #f9f9f9;
+    border-radius: 5px;
+}
+/*--------------------- packages page end --------------------*/
+
+
+/*---------------------------- service page starts ------------------------*/
+
+.service{
+    margin-top: 30px;
+    background: #f9f9f9;
+}
+.service .row{
+    margin-top: 40px;
+}
+
+.service .card{
+    box-shadow: 0px 5px 5px -6px black;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    padding: 10px;
+}
+.service .card i{
+      font-size: 4rem;
+      text-align: center;
+      color: #ffa500;
+      margin-top: 30px;
+}
+.service .card-body h3{
+    font-weight: 600;
+}
+.service .card .card-body{
+    text-align: center;
+}
+
+
+/*---------------------------- service page ends ------------------------*/
+
+
+
+
+/*---------------------------- Gallery page start ------------------------*/
+
+.gallery {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.gallery .row{
+    margin-top: 30px;
+}
+ .gallery .card img{
+    transition: 0.5s;
+    
+ }
+.gallery .card img:hover{
+    transform: scale(1.1);
+}
+
+
+/*---------------------------- Gallery page ends ------------------------*/
+
+
+/*------------------------- contact page starts----------------------------- */
+
+.contact{
+    background-image: url(https://images.pexels.com/photos/302549/pexels-photo-302549.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+   
+}
+.contact span{
+    color: #ffa500;
+}
+.contact .row{
+    margin: 50px 0;
+    padding: 0px 0px 50px 0px;
+    
+}
+.contact h1{
+    color: #f9f9f9;
+    font-weight: 600;
+    line-height: 50px;
+    text-shadow: 0px 5px 3px black;
+}
+.contact p{
+    color: #f9f9f9;  
+    margin-top: 30px; 
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 1rem;
+    text-shadow: 0px 5px 7px black;
+}
+.contact .icon{
+    margin-top: 40px;
+}
+.contact .explore{
+    width: 120px;
+    letter-spacing: 1px;
+   
+}
+
+.contact h3{
+    color: #f9f9f9;
+    text-shadow: 0px 5px 3px  black;
+}
+.contact .forms{
+    background-color: rgba(0,0,0,.5);
+    padding-top: 50px;
+    border-radius: 10px;    
+    
+}
+.contact form div{
+    color: #f9f9f9;
+}
+.contact .btn{
+    font-weight: 550;
+    font-size: .8rem;
+    padding: 10px;
+    color: black;
+    transition: .5s;
+}
+.contact .btn:hover{
+    transform: scale(1.1);
+
+}
+
+
+/*------------------------- contact page ends----------------------------- */
+
+/*------------------------- footer page starts ----------------------------------*/
+
+.footer{
+    background-color: #111010;
+   min-height:400px ;
+}
+.footer .container ul h3{
+    color: #ffa500;
+    text-shadow:  0px 1px 1px black;
+    font-weight: 600;
+}
+
+.footer .container ul{
+      margin-top: 50px;
+      color: #f9f9f9;
+      text-align: center;
+     
+}
+
+.footer .container ul li{
+    text-shadow:  0px 1px 1px black;
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer .content{
+    color: #f9f9f9;
+}
+.footer .content span{
+    color: #ffa500;
+}
+ .footer .socialicon a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 13px;
+    margin: 5px;
+    color: #f9f9f9;
+    background-color: #ffa500;
+    border-radius: 30%;
+    transition: .5s;
+    
+ }
+ .footer .socialicon a:hover{
+    transform: scale(1.1);
+    }
+ 
+    @media(max-width:765px){
+        
+    }
+
+
+
+/*------------------------- footer page ends ----------------------------------*/
